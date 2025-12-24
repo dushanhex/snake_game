@@ -35,4 +35,26 @@ score_display.hideturtle()
 score_display.goto(0, 260)
 score_display.write(f"Score: {score}", align="center", font=("Arial", 20, "normal"))
 
-                    
+# Functions
+def  go_up():
+    if head.direction != "down":
+        head.direction = "down"
+
+def go_down():
+    if head.direction != "up":
+        head.direction = "down"
+
+def go_right():
+    if head.direction != "left":
+        head.direction = "right"
+
+def move():
+    if head.direction == "up":
+        head.sety(head.ycor() + 20)
+    if head.direction == "down":
+        head.sety(head.ycor() - 20)
+    if head.direction == "left":
+        head.setx(head.xcor() - 20)
+    if head.direction == "right":
+        head.setx(head.xcor() + 20)
+
